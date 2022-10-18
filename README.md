@@ -182,6 +182,22 @@ where `name` can be chosen by you to identify your account.
 
 16) Repeat all the previous steps if you want to manage other accounts. 
 
+## Running automated in a crontab
+
+You can use a crontab to automatically execute calendar sync in the background.
+
+In a console, enter:
+```
+crontab -e
+```
+
+This will open an editor (vi). To append a line, type `Go` and paste:
+```
+1 * * * * * /opt/homebrew/bin/python3 /Users/kfleerko/code/gh/klausfl/gcalsync/gcalsync.py tw "klaus.fleerkoetter.external@zalando.de" tw primary 14d --colorId 5
+```
+
+Press escape and type `:x!` to exit.
+
 
 # Possible improvements 
 
